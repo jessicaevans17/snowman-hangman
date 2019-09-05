@@ -17,13 +17,17 @@ const App = () => {
   )
   const [showLetter, setShowLetter] = useState(false)
   const [correctLetter, setCorrectLetter] = useState([])
+  const [guesses, setGuesses] = useState([])
+  console.log(guesses)
 
-  const checkLetters = e => {
+  const letterClick = e => {
     const letter = e.target.textContent
     console.log(letter)
+
     if (randomWord.includes(letter)) {
       console.log(true)
       setShowLetter(true)
+
       setCorrectLetter(letter)
     } else {
       console.log(false)
@@ -36,7 +40,9 @@ const App = () => {
         <h1 className="page-title">Let's Build a Snowman!</h1>
       </nav>
       <main>
-        <section className="snowman-section">Snowman goes here!</section>
+        <section className="snowman-section">
+          <img src={Pic8} alt="snowman" />
+        </section>
         <section className="answer-display">
           {randomWord.map((item, i) => {
             if (showLetter === true && item.indexOf(correctLetter >= 0)) {
@@ -61,7 +67,7 @@ const App = () => {
               <button
                 key={item}
                 // disabled={!buttonClicked}
-                onClick={checkLetters}
+                onClick={letterClick}
                 className="letter-button"
               >
                 {item}

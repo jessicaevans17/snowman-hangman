@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Snowburst+One&display=swap");
 :root {
   font: 16px / 1 sans-serif;
   --color1: #cbe6e8;
@@ -13,6 +14,7 @@ body {
   margin: 0;
   min-height: 100%;
   text-align: center;
+  font-family: "Snowburst One", cursive;
 }
 
 body,
@@ -21,13 +23,21 @@ body,
   flex-direction: column;
   align-items: center;
 }
+nav {
+  background-color: var(--color2);
+  padding: 1rem;
+}
 
 .snowman-section {
   justify-content: center;
-  background-color: var(--color1);
+  /* background-color: var(--color1); */
   height: 17rem;
   border-bottom: solid black 2px;
   border-top: solid black 2px;
+}
+
+img {
+  height: 15rem;
 }
 
 .answer-display {
@@ -54,10 +64,11 @@ body,
 
 .letter-button {
   font-size: 1.5rem;
-  height: 2rem;
-  width: 2rem;
+  height: 3rem;
+  width: 3rem;
   margin: 0.25rem;
   border: solid 2px var(--color3);
   border-radius: 0.25rem;
   background-color: var(--color1);
+  font-family: "Snowburst One", cursive;
 }
