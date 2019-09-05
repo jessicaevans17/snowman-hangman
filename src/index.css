@@ -1,5 +1,8 @@
 :root {
   font: 16px / 1 sans-serif;
+  --color1: #cbe6e8;
+  --color2: #d6f8f3;
+  --color3: #0e0e0e;
 }
 
 html {
@@ -9,4 +12,52 @@ html {
 body {
   margin: 0;
   min-height: 100%;
+  text-align: center;
+}
+
+body,
+.snowman-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.snowman-section {
+  justify-content: center;
+  background-color: var(--color1);
+  height: 17rem;
+  border-bottom: solid black 2px;
+  border-top: solid black 2px;
+}
+
+.answer-display {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color2);
+  height: 7rem;
+  border-bottom: solid black 2px;
+}
+
+.space {
+  border-bottom: solid 2px var(--color3);
+  margin: 0rem 0.5rem;
+  width: 1.5rem;
+}
+
+.user-guess {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.letter-button {
+  font-size: 1.5rem;
+  height: 2rem;
+  width: 2rem;
+  margin: 0.25rem;
+  border: solid 2px var(--color3);
+  border-radius: 0.25rem;
+  background-color: var(--color1);
 }
